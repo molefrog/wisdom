@@ -1,0 +1,20 @@
+{
+  "name": "journey-to-wisdom",
+  "version": "1.0.0",
+  "description": "A journey to learn good things and make your brain awesome",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/molefrog/wisdom/"
+  },
+  "keywords": [
+    "wisdom",
+    "journey",
+    "monkey-to-batya"
+  ],
+  "author": "Tigran Tumasov",
+  "license": "ISC"
+}
