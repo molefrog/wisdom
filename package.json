@@ -4,7 +4,8 @@
   "description": "A journey to learn good things and make your brain awesome",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
     "monkey-to-batya"
   ],
   "author": "Tigran Tumasov",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
 }

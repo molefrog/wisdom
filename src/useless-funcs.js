@@ -1,19 +1,18 @@
-var repeat = function(string, number) {
-  var newString = '';
+exports.repeat = function(source, times) {
+  var repeated = '';
+  times = times || 1;
 
-  if (string === '') {
-    return "Your string doesn't have any words."
-  } else if (typeof string !== 'string') {
-    return "'" + string + "' isn't string, it is " + typeof string + "."
+  if (typeof source !== 'string') {
+    throw "'" + source + "' isn't string, it is " + typeof source + "."
   }
 
-  for (i = 1; i <= number; ++i ) {
-    newString += string;
+  if (typeof times !== 'number') {
+    throw new Error('Second argument should be a number!');
   }
 
-  return 'Your repeated string: ' + newString;
-}
+  for (i = 1; i <= times; ++i ) {
+    repeated += source;
+  }
 
-module.exports = {
-  'repeat': repeat
+  return repeated;
 }

@@ -1,10 +1,10 @@
-var allFunctions = require('./src/useless-funcs');
+var repeat = require('./src/useless-funcs').repeat;
 
 
 /// tests for Repeat Function.
 console.log('Tests for Repeat Function \n=========================\n')
 
-console.log( allFunctions.repeat('hui', 25));
-console.log( allFunctions.repeat(25, 25));
-console.log( allFunctions.repeat('', 25));
-console.log( allFunctions.repeat(undefined, 25));
+console.log( repeat('kek', 25)      );
+console.log( repeat(25, 25)         );
+console.log( repeat('', 25)         );
+console.log( repeat(undefined, 25)  );
