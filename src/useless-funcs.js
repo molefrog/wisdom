@@ -16,3 +16,18 @@ exports.repeat = function(source, times) {
 
   return repeated;
 }
+
+
+exports.arrayTimes = function(source, element) {
+
+  var times = 0;
+
+  for (i = 0; i !== source.length; ++i) {
+
+    if ( source[i] === element ) {
+      times = times + 1;
+    }
+  }
+
+  return times;
+}
