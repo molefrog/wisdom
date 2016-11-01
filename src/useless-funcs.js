@@ -31,3 +31,39 @@ exports.arrayTimes = function(source, element) {
 
   return times;
 }
+
+function dividable(a,b) {
+  return !(a % b);
+}
+
+function dividedFlags(number) {
+  var flags = [];
+  for (var i = 2; i < number; ++i) {
+    flags.push(dividable(number, i));
+  }
+
+  return flags;
+}
+exports.dividedFlags = dividedFlags
+
+exports.isPrime = function(number) {
+  var result;
+  var arrayOfFlags = dividedFlags(number);
+
+  if (number == 0)
+    return false
+
+  if (number == 1)
+    return false
+
+  if (number == 2)
+    return true
+
+  for (var i = 0; i < arrayOfFlags.length; ++i) {
+    if (arrayOfFlags[i] == true) {
+      return false
+    }
+  }
+
+  return true;
+}
