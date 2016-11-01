@@ -1,4 +1,4 @@
-exports.repeat = function(source, times) {
+function repeat(source, times) {
   var repeated = '';
   times = times || 1;
 
@@ -17,8 +17,7 @@ exports.repeat = function(source, times) {
   return repeated;
 }
 
-
-exports.arrayTimes = function(source, element) {
+function arrayTimes(source, element) {
 
   var times = 0;
 
@@ -44,26 +43,53 @@ function dividedFlags(number) {
 
   return flags;
 }
-exports.dividedFlags = dividedFlags
 
-exports.isPrime = function(number) {
-  var result;
-  var arrayOfFlags = dividedFlags(number);
+// count([1,2,3], 3) => 1
+// count([1,2,4], 3) => 0
+// count([], 3)      => 0
+// count([3,3,1], 3) => 2
+function count(array, elem) {
+  // ... ДЗ!
+}
 
+// hasElement([1,2,3], 3) => true
+// hasElement([1,2,4], 3) => false
+// hasElement([], 3)      => false
+function hasElement(array, elem) {
+  // ... ДЗ!
+  // ... ДЗ! через count
+  for (var i = 0; i < array.length; ++i) {
+    if (array[i] == elem) {
+      return true;
+    }
+
+    return false;
+  }
+}
+
+// hasTrue([false, false, false]) => false
+// hasTrue([]) => false
+// hasTrue([true, false]) => true
+function hasTrue(array) {
+  return hasElement(array, true);
+}
+
+function isPrime(number) {
   if (number == 0)
     return false
 
   if (number == 1)
     return false
 
-  if (number == 2)
-    return true
+  return hasTrue(dividedFlags(number));
+}
 
-  for (var i = 0; i < arrayOfFlags.length; ++i) {
-    if (arrayOfFlags[i] == true) {
-      return false
-    }
-  }
-
-  return true;
+module.exports = {
+  repeat: repeat,
+  arrayTimes: arrayTimes,
+  dividable: dividable,
+  dividedFlags: dividedFlags,
+  hasElement: hasElement,
+  hasTrue: hasTrue,
+  isPrime: isPrime,
 }

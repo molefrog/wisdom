@@ -2,6 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var isPrime = require('../src/useless-funcs').isPrime;
 var dividedFlags = require('../src/useless-funcs').dividedFlags;
+var hasElement = require('../src/useless-funcs').hasElement;
 
 
 describe('isPrime function', function() {
@@ -39,3 +40,9 @@ describe('dividedFlags function', function() {
     expect(dividedFlags(2)).to.deep.equal([]);
   });
 });
+// 
+// describe('hasElement function', function() {
+//   it('just returns true or false', function() {
+//     expect(hasElement([2,3,4], 4)).to.deep.equal(true);
+//   });
+// });
