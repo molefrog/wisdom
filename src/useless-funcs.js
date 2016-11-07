@@ -81,7 +81,7 @@ function isPrime(number) {
   if (number == 1)
     return false
 
-  return hasTrue(dividedFlags(number));
+  return !hasTrue(dividedFlags(number));
 }
 
 module.exports = {
