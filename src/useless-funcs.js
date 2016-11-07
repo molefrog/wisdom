@@ -94,6 +94,23 @@ function lastDigit(number) {
   return Math.floor(number) % 10;
 }
 
+function digits(number) {
+  var result = [];
+  var rem;
+
+  if (number == 0)
+    return [0];
+
+  for (; number ;) {
+    rem = number % 10;
+    number = Math.floor(number / 10);
+
+    result.push(rem);
+  }
+
+  return result.reverse();
+}
+
 module.exports = {
   repeat: repeat,
   arrayTimes: arrayTimes,
@@ -104,5 +121,6 @@ module.exports = {
   isPrime: isPrime,
   count: count,
   countWhere: countWhere,
-  lastDigit: lastDigit
+  lastDigit: lastDigit,
+  digits: digits
 }
