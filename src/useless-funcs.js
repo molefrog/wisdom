@@ -90,6 +90,10 @@ function isPrime(number) {
   return !hasTrue(dividedFlags(number));
 }
 
+function lastDigit(number) {
+  return Math.floor(number) % 10;
+}
+
 module.exports = {
   repeat: repeat,
   arrayTimes: arrayTimes,
@@ -99,5 +103,6 @@ module.exports = {
   hasTrue: hasTrue,
   isPrime: isPrime,
   count: count,
-  countWhere: countWhere
+  countWhere: countWhere,
+  lastDigit: lastDigit
 }
