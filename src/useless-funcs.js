@@ -49,14 +49,9 @@ function dividedFlags(number) {
 // count([], 3)      => 0
 // count([3,3,1], 3) => 2
 function count(array, elem) {
-  var count = 0;
-  for (var i = 0; i < array.length; ++i) {
-    if (array[i] == elem) {
-      count++;
-    }
-  }
-
-  return count;
+  return countWhere(array, function(x) {
+    return elem == x
+  });
 }
 
 function countWhere(array, predicate) {
