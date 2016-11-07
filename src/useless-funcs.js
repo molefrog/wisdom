@@ -49,7 +49,6 @@ function dividedFlags(number) {
 // count([], 3)      => 0
 // count([3,3,1], 3) => 2
 function count(array, elem) {
-  // ... ДЗ!
   var count = 0;
   for (var i = 0; i < array.length; ++i) {
     if (array[i] == elem) {
@@ -64,15 +63,7 @@ function count(array, elem) {
 // hasElement([1,2,4], 3) => false
 // hasElement([], 3)      => false
 function hasElement(array, elem) {
-  // ... ДЗ!
-  // ... ДЗ! через count
-  for (var i = 0; i < array.length; ++i) {
-    if (array[i] == elem) {
-      return true;
-    }
-
-    return false;
-  }
+  return count(array, elem) > 0
 }
 
 // hasTrue([false, false, false]) => false
