@@ -50,6 +50,14 @@ function dividedFlags(number) {
 // count([3,3,1], 3) => 2
 function count(array, elem) {
   // ... ДЗ!
+  var count = 0;
+  for (var i = 0; i < array.length; ++i) {
+    if (array[i] == elem) {
+      count++;
+    }
+  }
+
+  return count;
 }
 
 // hasElement([1,2,3], 3) => true
@@ -92,4 +100,5 @@ module.exports = {
   hasElement: hasElement,
   hasTrue: hasTrue,
   isPrime: isPrime,
+  count: count,
 }
