@@ -59,11 +59,23 @@ function count(array, elem) {
   return count;
 }
 
+function countWhere(array, predicate) {
+  var count = 0;
+  for (var i = 0; i < array.length; ++i) {
+    if (predicate(array[i])) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+
 // hasElement([1,2,3], 3) => true
 // hasElement([1,2,4], 3) => false
 // hasElement([], 3)      => false
 function hasElement(array, elem) {
-  return count(array, elem) > 0
+  return count(array, elem) > 0;
 }
 
 // hasTrue([false, false, false]) => false
@@ -92,4 +104,5 @@ module.exports = {
   hasTrue: hasTrue,
   isPrime: isPrime,
   count: count,
+  countWhere: countWhere
 }

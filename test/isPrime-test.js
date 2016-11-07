@@ -40,9 +40,3 @@ describe('dividedFlags function', function() {
     expect(dividedFlags(2)).to.deep.equal([]);
   });
 });
-// 
-// describe('hasElement function', function() {
-//   it('just returns true or false', function() {
-//     expect(hasElement([2,3,4], 4)).to.deep.equal(true);
-//   });
-// });

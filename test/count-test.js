@@ -1,6 +1,8 @@
 var chai = require('chai');
 var expect = chai.expect;
 var count = require('../src/useless-funcs').count;
+var countWhere = require('../src/useless-funcs').countWhere;
+var isPrime = require('../src/useless-funcs').isPrime;
 
 
 describe('count function', function() {
@@ -16,4 +18,12 @@ describe('count function', function() {
     expect(count([], 3)).to.equal(0);
   });
 
+});
+
+describe('countWhere function', function() {
+  it('returns number of elements that match the predicate', function() {
+    expect(
+      countWhere([1,2,5,7], isPrime)
+    ).to.equal(3);
+  });
 });
